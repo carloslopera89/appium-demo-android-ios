@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.10"
+        classpath "net.serenity-bdd:serenity-single-page-report:3.3.10"
+    }
+}
+
+plugins {
+    id "java"
+    id "idea"
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+sourceCompatibility = 17
+targetCompatibility = 17
+
+ext {
+    serenityCoreVersion = '3.7.0'
+}
+
+dependencies {
+    implementation group: 'org.slf4j', name: 'slf4j-reload4j', version: '2.0.7'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+    implementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityCoreVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityCoreVersion"
+    implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCoreVersion"
+    implementation 'net.serenity-bdd:serenity-ensure:2.3.5'
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityCoreVersion"
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+    implementation group: 'io.appium', name: 'java-client', version: '8.3.0'
+    implementation 'junit:junit:4.13.2'
+    implementation 'org.assertj:assertj-core:3.9.1'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    systemProperties System.getProperties()
+    systemProperty "file.encoding", "utf-8"
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
+
+serenity {
+    requirementsDir = "src/test/resources/features"
+    reports = ["single-page-html"]
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate, reports)

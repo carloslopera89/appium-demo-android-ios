@@ -1,0 +1,89 @@
+2024-07-04 23:37:02:297 WARN  [main] io.cucumber.core.plugin.SerenityReporter.parseGherkinIn(SerenityReporter.java:219) - Could not parse the Gherkin in feature file file:///Users/carloslopera/Documents/Proyectos/ProyectosPersonales/ui-automation-demo/src/test/resources/features/authentication/authentication.feature: file ignored
+2024-07-04 23:37:02:425 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.logBanner(ConsoleLoggingListener.java:100) - 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
+
+2024-07-04 23:37:02:429 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.testSuiteStarted(ConsoleLoggingListener.java:121) - Test Suite Started: autenticación en la aplicación de prueba
+2024-07-04 23:37:02:446 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.testSuiteStarted(ConsoleLoggingListener.java:121) - Test Suite Started: autenticación en la aplicación de prueba
+2024-07-04 23:37:31:123 INFO  [main] com.co.demomobile.lineabase.utils.datauser.ControlExecution.featuresSegmentation(ControlExecution.java:31) - =====> Total Agentes: '' | Agente Num: ''
+2024-07-04 23:37:31:353 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.logBanner(ConsoleLoggingListener.java:100) - 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
+
+2024-07-04 23:37:31:356 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.testSuiteStarted(ConsoleLoggingListener.java:121) - Test Suite Started: autenticación en la aplicación de prueba
+2024-07-04 23:37:31:371 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.testSuiteStarted(ConsoleLoggingListener.java:121) - Test Suite Started: autenticación en la aplicación de prueba
+2024-07-04 23:37:31:577 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.testStarted(ConsoleLoggingListener.java:141) - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Ingresar en la aplicación demo con validacion Ensure y data csv(autenticación-en-la-aplicación-de-prueba;ingresar-en-la-aplicación-demo-con-validacion-ensure-y-data-csv)
+--------------------------------------------------------------------------------
+2024-07-04 23:38:02:539 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.logSuccess(ConsoleLoggingListener.java:278) - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Ingresar en la aplicación demo con validacion Ensure y data csv
+----------------------------------------------------------------------
+2024-07-04 23:38:05:127 INFO  [main] com.co.demomobile.lineabase.runners.RunnerWithData.after(RunnerWithData.java:46) - =====> End Execution SerenityBDD
+2024-07-04 23:38:29:32 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.logBanner(ConsoleLoggingListener.java:100) - 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
+
+2024-07-04 23:38:29:36 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.testSuiteStarted(ConsoleLoggingListener.java:121) - Test Suite Started: autenticación en la aplicación de prueba
+2024-07-04 23:38:29:56 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.testSuiteStarted(ConsoleLoggingListener.java:121) - Test Suite Started: autenticación en la aplicación de prueba
+2024-07-04 23:38:29:227 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.testStarted(ConsoleLoggingListener.java:141) - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Ingresar en la aplicación demo(autenticación-en-la-aplicación-de-prueba;ingresar-en-la-aplicación-demo)
+--------------------------------------------------------------------------------
+2024-07-04 23:38:58:663 INFO  [main] net.thucydides.core.logging.ConsoleLoggingListener.logSuccess(ConsoleLoggingListener.java:278) - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Ingresar en la aplicación demo
+----------------------------------------------------------------------
