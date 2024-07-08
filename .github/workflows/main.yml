@@ -3,7 +3,7 @@ name: Appium CI Github Actions
 on: [push]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: self-hosted
     steps:
       - name: Checkout project sources
@@ -19,13 +19,23 @@ jobs:
       - name: Run Appium Tests
         run: ./gradlew test -Dproperties="appiumexecute/android.conf" -Dcucumber.filter.tags="@testExitoso" aggregate --info # running our test with info to check the results
 
-      - name: Publish Serenity Report
+  upload-report-serenity:
+    needs: build-and-deploy
+    runs-on: self-hosted
+
+    steps:
+      - name: Upload Serenity Report
         uses: actions/upload-artifact@v2
         with:
           name: serenity-report
           path: target/site/serenity
 
-      - name: Deploy to GitHub Pages
+  deploy-report-serenity:
+    needs: build-and-deploy
+    runs-on: self-hosted
+
+    steps:
+      - name: Deploy to GitHub Pages serenity report
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
