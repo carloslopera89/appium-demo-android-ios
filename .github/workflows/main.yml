@@ -17,7 +17,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
       - name: Run Appium Tests
-        run: ./gradlew test -Dproperties="appiumexecute/android.conf" -Dcucumber.filter.tags="@testExitoso" aggregate--info # running our test with info to check the results
+        run: ./gradlew test -Dproperties="appiumexecute/android.conf" -Dcucumber.filter.tags="@testExitoso" aggregate --info # running our test with info to check the results
 
       - name: Publish Serenity Report
         uses: actions/upload-artifact@v2
