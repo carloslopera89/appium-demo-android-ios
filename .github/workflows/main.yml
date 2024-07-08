@@ -3,7 +3,7 @@ name: Appium CI Github Actions
 on: [push]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: self-hosted
     steps:
       - name: Checkout project sources
@@ -16,27 +16,45 @@ jobs:
         run: chmod +x gradlew
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
-      - name: Run Appium Tests
-        run: ./gradlew test -Dproperties="appiumexecute/android.conf" -Dcucumber.filter.tags="@testExitoso" aggregate --info # running our test with info to check the results
 
-  upload-report-serenity:
-    needs: build-and-deploy
+  execution-test:
+    needs: build
     runs-on: self-hosted
 
     steps:
-      - name: Upload Serenity Report
+      - name: Run Appium Tests
+        run: ./gradlew test -Dproperties="appiumexecute/android.conf" -Dcucumber.filter.tags="@testExitoso" aggregate --info # running our test with info to check the results
+
+
+  upload-report-serenity:
+    needs: execution-test
+    runs-on: self-hosted
+
+    steps:
+      - name: Upload Serenity Report as artifact
         uses: actions/upload-artifact@v2
         with:
           name: serenity-report
           path: target/site/serenity
 
+
   deploy-report-serenity:
-    needs: build-and-deploy
+    needs: upload-report-serenity
     runs-on: self-hosted
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: report serenity
+          path: ./public
+
       - name: Deploy to GitHub Pages serenity report
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/site/serenity
+          #publish_dir: ./target/site/serenity
+          publish_dir: ./public
