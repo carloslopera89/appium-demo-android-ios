@@ -72,4 +72,4 @@ jobs:
         uses: rtCamp/action-slack-notify@v2.1.0
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_MESSAGE: "A new push or pull request has been made to the repository!" "https://carloslopera89.github.io/appium-demo-android-ios/"
+          SLACK_MESSAGE: "A new push or pull request has been made to the repository! https://carloslopera89.github.io/appium-demo-android-ios/
