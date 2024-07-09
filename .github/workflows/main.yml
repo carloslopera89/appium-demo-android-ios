@@ -60,16 +60,16 @@ jobs:
       - name: Output GitHub Pages URL
         run: echo "GitHub Pages URL:" + " https://carloslopera89.github.io/appium-demo-android-ios/"
 
-  notifications-slack:
-    needs: deploy-report-serenity
-    runs-on: self-hosted
+  #notifications-slack:
+    #needs: deploy-report-serenity
+    #runs-on: self-hosted
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    #steps:
+      #- name: Checkout code
+        #uses: actions/checkout@v2
 
-      - name: Send Slack notification
-        uses: rtCamp/action-slack-notify@v2.1.0
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_MESSAGE: "A new push or pull request has been made to the repository! https://carloslopera89.github.io/appium-demo-android-ios/"
+      #- name: Send Slack notification
+        #uses: rtCamp/action-slack-notify@v2.1.0
+        #env:
+          #SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          #sSLACK_MESSAGE: "A new push or pull request has been made to the repository! https://carloslopera89.github.io/appium-demo-android-ios/"
