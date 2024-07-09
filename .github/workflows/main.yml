@@ -57,3 +57,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./target/site/serenity
+      - name: Output GitHub Pages URL
+        run: echo "GitHub Pages URL:" + " https://carloslopera89.github.io/appium-demo-android-ios/"
